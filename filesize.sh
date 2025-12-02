@@ -4,10 +4,10 @@ total_size=0
 show_summary=false
 show_only_summary=false
 has_errors=false
-files_to_precoss=()
+files_to_process=()
 
 print_usage(){
-	echo "Using: $0 [-s, -S] [--usage, --help] <file1> <file2> ..."
+	echo "Using: $0 [-s, -S] [--usage, --help] <file1> [file2, ...]"
 
 }
 
@@ -83,7 +83,7 @@ while [[ $# -gt 0 ]]; do
 			exit 2
 			;;
 		*)
-			files_to_process+=("$1")
+			break
 			shift
 			;;
 	esac
